@@ -64,7 +64,7 @@ h6 {
   max-height: fit-content;
   background-image: url("https://picsum.photos/800/1000");
   background-size: cover;
-  background-position: middle;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .wrapper {
