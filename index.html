@@ -9,7 +9,8 @@
   </head>
   <body>
     <div class="container wrapper">
-      <div class="card card-alt-1">
+      <div class="card">
+        <!-- card-alt-1 -->
         <div>
           <p id="line-1">Color of</p>
           <p id="line-2">the Year</p>
@@ -18,47 +19,60 @@
         <span>PANTONE<sup>&#174;</sup></span>
       </div>
     </div>
-    <div class="wrapper">
-      <header>
-        <label for="x-percent">X-axis position</label>
-        <input
-          type="range"
-          id="x-percent"
-          min="0"
-          max="100"
-          value="50"
-          step="5"
-        />
-        <label for="y-percent">Y-axis position</label>
-        <input
-          type="range"
-          id="y-percent"
-          min="0"
-          max="100"
-          value="50"
-          step="5"
-        />
-        <label for="scale-percent">Card Size</label>
-        <input
-          type="range"
-          id="scale-percent"
-          min="0.2"
-          max="1.8"
-          value="1"
-          step="0.1"
-        />
-        <label for="bgPosition">Photo Position</label>
-        <select name="" id="bgPosition">
-          <option value="bottom">Bottom</option>
-          <option value="center">Middle</option>
-          <option value="top">Top</option>
-        </select>
-      </header>
+    <div class="wrapper grid">
+      <div class="col">
+        <header>
+          <label for="x-percent">X-axis position</label>
+          <input
+            type="range"
+            id="x-percent"
+            min="0"
+            max="100"
+            value="50"
+            step="5"
+          />
+          <label for="y-percent">Y-axis position</label>
+          <input
+            type="range"
+            id="y-percent"
+            min="0"
+            max="100"
+            value="50"
+            step="5"
+          />
+          <label for="scale-percent">Card Size</label>
+          <input
+            type="range"
+            id="scale-percent"
+            min="0.2"
+            max="1.8"
+            value="1"
+            step="0.1"
+          />
+          <label for="bgPosition">Photo Position</label>
+          <select name="" id="bgPosition">
+            <option value="center">Middle</option>
+            <option value="bottom">Bottom</option>
 
-      <form action="">
-        <input type="url" name="" id="img-upload" />
-        <button type="submit">Change Image</button>
-      </form>
+            <option value="top">Top</option>
+          </select>
+        </header>
+
+        <form action="">
+          <input type="url" name="" id="img-upload" />
+          <button type="submit">Change Image</button>
+        </form>
+      </div>
+      <div class="col">
+        <label for="line-1-input">Change Line 1 Text</label>
+        <input type="text" name="" id="line-1-input" value="Color of" />
+        <label for="line-2-input">Change Line 2 Text</label>
+        <input type="text" name="" id="line-2-input" value="the Year" />
+        <label for="line-3-input">Change Line 3 Text</label>
+        <input type="text" name="" id="line-3-input" value="2024" />
+        <label for="hero-input">Card Title Text</label>
+        <input type="text" name="" id="hero-input" value="PANTONE" />
+      </div>
     </div>
 
     <script src="app.js"></script>
