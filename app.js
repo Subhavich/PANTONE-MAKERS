@@ -14,7 +14,9 @@ const line1Input = document.querySelector("#line-1-input");
 const line2Input = document.querySelector("#line-2-input");
 const line3Input = document.querySelector("#line-3-input");
 const cardTitleInput = document.querySelector("#hero-input");
-
+const cardStyle1 = document.querySelector("#card-style-1");
+const cardStyle2 = document.querySelector("#card-style-2");
+const base = document.querySelector(".base");
 // change pic src to form url
 bgChanger.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -60,4 +62,21 @@ line3Input.addEventListener("input", (e) => {
 // card title
 cardTitleInput.addEventListener("input", (e) => {
   cardTitle.textContent = e.target.value;
+});
+
+// button that change card styles
+// default style -> erase other classes
+cardStyle1.addEventListener("click", (e) => {
+  console.log(card.classList);
+  card.classList.forEach((element) => {
+    if (element != "card") {
+      card.classList.remove(element);
+    }
+  });
+  console.log(card.classList);
+});
+// add class
+
+cardStyle2.addEventListener("click", (e) => {
+  card.classList.toggle("card-alt-1");
 });
