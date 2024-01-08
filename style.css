@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+label,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ------------------------------------COMPONENTS------------------------------------ */
+.container {
+  display: flex;
+  margin: auto;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  /* width: 86%;
+  max-width: 800px;
+  height: 800px;
+  max-height: 80vh; */
+  min-height: 20em;
+  min-width: 20em;
+  resize: both;
+  overflow: hidden;
+  max-height: fit-content;
+  background-image: url("https://picsum.photos/800/1000");
+  background-size: cover;
+  background-position: middle;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  margin: auto;
+  max-width: 800px;
+  width: 86%;
+  height: 800px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  width: 150px;
+  height: 160px;
+  border: solid white 4px;
+  position: absolute;
+  /* to target */
+  padding: 0.5em;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+span {
+  font-weight: 600;
+  font-size: 22px;
+}

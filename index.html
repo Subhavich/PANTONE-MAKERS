@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PANTONE MAKER</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container wrapper">
+      <div class="card">
+        <div>
+          <p>Color of</p>
+          <p>the Year</p>
+          <p>2024</p>
+        </div>
+        <span>PANTONE<sup>&#174;</sup></span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header>
+        <label for="x-percent">X-axis position</label>
+        <input
+          type="range"
+          id="x-percent"
+          min="0"
+          max="100"
+          value="50"
+          step="5"
+        />
+        <label for="y-percent">Y-axis position</label>
+        <input
+          type="range"
+          id="y-percent"
+          min="0"
+          max="100"
+          value="50"
+          step="5"
+        />
+      </header>
+
+      <form action="">
+        <input type="url" name="" id="img-upload" />
+        <button type="submit">Change Image</button>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
