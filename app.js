@@ -3,6 +3,7 @@ const imageContainer = document.querySelector(".container");
 const card = document.querySelector(".card");
 const xChanger = document.querySelector("#x-percent");
 const yChanger = document.querySelector("#y-percent");
+const sizeChanger = document.querySelector("#scale-percent");
 
 const bgChanger = document.querySelector("form");
 // change pic src to form url
@@ -22,4 +23,9 @@ xChanger.addEventListener("input", (e) => {
 yChanger.addEventListener("input", (e) => {
   const newPercent = e.target.value;
   card.style.top = `${newPercent}%`;
+});
+//(scale)
+sizeChanger.addEventListener("input", (e) => {
+  const newFr = e.target.value;
+  card.style.transform = `scale(${newFr})`;
 });

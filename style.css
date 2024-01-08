@@ -87,6 +87,7 @@ h6 {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  transition: all 0.2s linear;
 }
 p {
   font-size: 16px;
