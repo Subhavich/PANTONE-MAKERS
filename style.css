@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo%20Thambi%202:700|Baloo%20Thambi%202:400");
 
 *,
 *::before,
@@ -47,7 +48,117 @@ h6 {
   isolation: isolate;
 }
 
+body {
+  font-family: "Baloo Thambi 2";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Baloo Thambi 2";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+.text-xxl {
+  font-size: 5.652rem; /* 90.4px */
+}
+
+.text-xl {
+  font-size: 3.997rem; /* 64px */
+}
+
+.text-lg {
+  font-size: 2.827rem; /* 45.28px */
+}
+
+.text-md {
+  font-size: 1.999rem; /* 32px */
+}
+
+.text-sm {
+  font-size: 1.414rem; /* 22.56px */
+}
+
+.text-xs {
+  font-size: 0.707rem; /* 11.36px */
+}
+.text-light {
+  font-weight: var(--fw-400);
+}
+.text-bold {
+  font-weight: var(--fw-700);
+}
+:root {
+  --text: rgb(11, 7, 9);
+  --background: rgb(252, 250, 251);
+  --primary: rgb(168, 107, 137);
+  --secondary: rgb(208, 180, 175);
+  --accent: rgb(188, 158, 141);
+  --fw-700: 700;
+  --fw-400: 400;
+}
+
+/* utils */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+input {
+  background-color: var(--accent);
+  border: 0.5px solid var(--text);
+  border-radius: 1em;
+  padding: 0.5em;
+}
+button {
+  border: 0;
+  border-radius: 0.25rem;
+  background: var(--text);
+  color: var(--background);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+button:hover {
+  opacity: 0.7;
+}
+/* ------------------------------------Styling------------------------------------ */
+/* ------------------------------------Main------------------------------------ */
+
+/* ------------------------------------Grid Menu------------------------------------ */
+.menu {
+  margin: 1em auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.col {
+  padding: 2em;
+  border-radius: 1em;
+  overflow: hidden;
+  font-family: inherit;
+}
+.col-1 {
+  background-color: var(--primary);
+}
+.col-2 {
+  background-color: var(--secondary);
+}
 /* ------------------------------------COMPONENTS------------------------------------ */
+
 .container {
   display: flex;
   margin: auto;
@@ -68,7 +179,6 @@ h6 {
   background-repeat: no-repeat;
 }
 .wrapper {
-  margin: auto;
   max-width: 800px;
   width: 86%;
   height: 800px;
