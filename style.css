@@ -66,23 +66,23 @@ html {
   font-size: 100%;
 } /* 16px */
 
-.text-xxl {
+.text-xxxl {
   font-size: 5.652rem; /* 90.4px */
 }
 
-.text-xl {
+.text-xxl {
   font-size: 3.997rem; /* 64px */
 }
 
-.text-lg {
+.text-xl {
   font-size: 2.827rem; /* 45.28px */
 }
 
-.text-md {
+.text-lg {
   font-size: 1.999rem; /* 32px */
 }
 
-.text-sm {
+.text-md {
   font-size: 1.414rem; /* 22.56px */
 }
 
@@ -106,13 +106,20 @@ html {
 }
 
 /* utils */
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .flow > * + * {
-  margin-top: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 0.2em);
+}
+.flow-left > * + * {
+  margin-left: var(--flow-space, 0.2em);
 }
 input {
-  background-color: var(--accent);
-  border: 0.5px solid var(--text);
-  border-radius: 1em;
+  background-color: transparent;
+  border: 2px solid var(--text);
   padding: 0.5em;
 }
 button {
@@ -142,21 +149,42 @@ button:hover {
 }
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1em;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 40em) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.grid input {
+  min-width: 100%;
+  max-width: 280px;
+  margin: auto;
 }
 .col {
   padding: 2em;
-  border-radius: 1em;
   overflow: hidden;
-  font-family: inherit;
+  font-family: inter;
 }
 .col-1 {
-  background-color: var(--primary);
-}
-.col-2 {
   background-color: var(--secondary);
 }
+.col-2 {
+  background-color: var(--accent);
+}
+#image-form {
+  border: 2px solid var(--text);
+  padding: 0.5em;
+  margin: 1em 0;
+}
+
 /* ------------------------------------COMPONENTS------------------------------------ */
 
 .container {
